@@ -33,11 +33,11 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.navigation:navigation-fragment:2.3.1'
-    implementation 'androidx.navigation:navigation-ui:2.3.1'
+    implementation 'androidx.navigation:navigation-fragment:2.3.3'
+    implementation 'androidx.navigation:navigation-ui:2.3.3'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
-    implementation 'com.google.firebase:firebase-crashlytics:17.3.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.1'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -64,17 +64,17 @@ dependencies {
     //Routing
     implementation 'com.github.jd-alexander:library:1.1.0'
 
-    implementation 'com.airbnb.android:lottie:3.5.0'
+    implementation 'com.airbnb.android:lottie:3.6.0'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
 
     //Firebase push notification
-    implementation 'com.google.firebase:firebase-messaging:20.3.0'
-    implementation 'com.google.firebase:firebase-messaging-directboot:20.3.0'
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.google.firebase:firebase-messaging-directboot:21.0.1'
+    compile 'com.squareup.okhttp3:okhttp:4.4.0'
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.google.code.gson:gson:2.7'
+    implementation 'com.google.code.gson:gson:2.8.6'
 
     //Circle ImageView
     implementation 'de.hdodenhof:circleimageview:3.1.0'
