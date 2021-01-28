@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textStyle="bold"
+        android:text="OTP VERIFICATION"
+        android:textSize="20dp"
+        android:gravity="bottom"
+        android:backgroundTint="#1E0091EA"
+        android:background="@drawable/gray_gradint_bg"
+        android:paddingStart="20dp"
+        android:id="@+id/et"
+        android:paddingBottom="10dp"
+        android:textColor="@color/pinColor"
+        android:alpha="0.8"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentEnd="true"
+        android:elevation="2dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_buc_buc_logo_final" />
+
+
+
+<!--    <include-->
+<!--        layout="@layout/loading_card"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:id="@+id/updateloading"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/et"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/otpET"
+            android:hint="Type OTP here"
+            android:inputType="number"
+            android:singleLine="true"
+            android:background="@drawable/sharpe_edge_stroke"
+            android:paddingStart="20dp"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="SUBMIT"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:id="@+id/submit"
+            android:background="@color/LogoOrange"/>
+
+
+    </LinearLayout>
+
+    </RelativeLayout>

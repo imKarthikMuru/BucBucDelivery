@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <item android:drawable="@android:color/white" />
+    <item
+        android:width="180dp"
+        android:height="180dp"
+        android:top="80dp"
+        android:bottom="10dp"
+        android:drawable="@drawable/ic_buc_buc_logo_final"
+        android:gravity="top|center_horizontal">
+        <!--        <bitmap-->
+        <!--                    android:src="@drawable/logo" />-->
+    </item>
+</layer-list>

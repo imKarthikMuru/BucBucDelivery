@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#FF5E06</color>
+    <color name="BannerOrange">#ED6148</color>
+    <color name="BannerOrangeDark">#E1543B</color>
+    <color name="LogoYellow">#FEE300</color>
+    <color name="LogoOrange">#FF5500</color>
+    <color name="LightBlue">#1E0091EA</color>
+    <color name="DarkGray">#353535</color>
+    <color name="pinColor">#262C3C</color>
+    <color name="material_green_50">#E8F5E9</color>
+    <color name="material_green_500">#4CAF50</color>
+    <color name="material_green_700">#388E3C</color>
+    <color name="material_green_a200">#69F0AE</color>
+    <color name="material_lime_a700">#AEEA00</color>
+    <color name="material_purple_a700">#AA00FF</color>
+    <color name="bannerRose">#F15B5C</color>
+    <color name="bannerRoseDark">#E75152</color>
+    <color name="Ggreen">#3cba54</color>
+    <color name="Gyellow">#f4c20d</color>
+    <color name="Gred">#db3236</color>
+    <color name="Gblue"> #4885ed</color>
+
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".RideCompletionActivity">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:lottie_fileName="celebration.json"
+            app:lottie_autoPlay="true"/>
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:src="@drawable/done"
+            android:scaleType="centerCrop"
+            android:id="@+id/iv"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"/>
+
+<!--    <pl.droidsonroids.gif.GifImageView-->
+<!--        android:id="@+id/iv"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@id/backBTN"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/ddone" />-->
+
+    <TextView
+        android:id="@+id/thanksTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Delivered Successfully !"
+        android:textColor="@color/pinColor"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thanksTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:alpha="0.8"
+        android:text="@string/thank_you_for_deliver_safely_on_time"
+        android:textColor="@color/pinColor"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/backBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/material_green_a200"
+        android:text="Back to Home"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+</RelativeLayout>

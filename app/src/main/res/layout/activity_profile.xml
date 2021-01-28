@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        style="?actionButtonStyle"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/quantum_ic_arrow_back_grey600_24"
+            android:tint="@color/pinColor"
+            android:onClick="Finish"
+            android:background="@android:color/transparent"
+            android:alpha="0.8"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Details"
+            android:textColor="@color/pinColor"
+            android:textSize="18dp"
+            android:alpha="0.8"
+            android:textStyle="bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_buc_buc_logo_final"
+        app:civ_border_width="5dp"
+        app:civ_border_color="@color/LightBlue"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/pinColor"
+            android:alpha="0.8"
+            android:id="@+id/name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+910123456789"
+            android:id="@+id/mob"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="address"
+            android:singleLine="true"
+            android:id="@+id/address"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="userId"
+            android:id="@+id/userId"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bike MOdel"
+            android:id="@+id/bikemodel"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BikeNo"
+            android:id="@+id/bikeNO"/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/dottedline"
+        android:layout_below="@id/dp"
+        android:id="@+id/iv1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/iv1"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/l1"
+            android:padding="10dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                app:cardCornerRadius="7dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/quantum_bluegrey600"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹00.00"
+                        android:textSize="24dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/totalEarn"
+                        android:textStyle="bold"
+                        android:layout_margin="30dp"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL EARNINGS"
+                            android:padding="10dp"
+                            android:id="@+id/tv1"
+                            android:gravity="end"
+                            android:layout_gravity="bottom"
+                            android:textColor="@color/colorPrimary"
+                            android:background="@color/quantum_bluegrey700" />
+
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:id="@+id/iv_money"
+                            android:layout_marginStart="10dp"
+                            app:layout_anchor="@id/tv1"
+                            android:layout_marginBottom="30dp"
+                            android:src="@drawable/ic_delivery_a" />
+
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardCornerRadius="7dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/Gyellow"
+                android:layout_height="180dp"
+                app:cardElevation="2dp"
+                android:layout_weight="1">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textSize="24dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/completedOrder"
+                        android:textStyle="bold"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:text="Completed !"
+                        android:layout_toRightOf="@id/completedOrder"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginStart="5dp"
+                        android:gravity="center_vertical"/>
+
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="wrap_content">
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="COMPLETED ORDERS"
+                            android:padding="10dp"
+                            android:id="@+id/tv2"
+                            android:gravity="end"
+                            android:layout_gravity="bottom"
+                            android:textColor="@color/colorPrimary"
+                            android:background="#DCAF0C" />
+
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:id="@+id/ivcomp"
+                            app:layout_anchor="@id/tv2"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="30dp"
+                            android:src="@drawable/ic_clearance" />
+
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/l2"
+            android:layout_below="@id/l1"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                app:cardCornerRadius="7dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/quantum_teal400"
+                app:cardElevation="2dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textSize="24dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/totalRating"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Averaged from 0 ratings"
+                        android:id="@+id/ratedusers"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_toRightOf="@id/totalRating"/>
+
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TOTAL RATINGS"
+                            android:padding="10dp"
+                            android:id="@+id/tv3"
+                            android:gravity="end"
+                            android:layout_gravity="bottom"
+                            android:textColor="@color/colorPrimary"
+                            android:background="@color/quantum_teal500" />
+
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_reward"
+                            android:id="@+id/rateiv"
+                            android:layout_marginStart="10dp"
+                            app:layout_anchor="@id/tv3"
+                            android:layout_marginBottom="30dp"
+                            />
+
+
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardCornerRadius="7dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/Gred"
+                android:layout_height="180dp"
+                android:layout_weight="1"
+                app:cardElevation="2dp">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="24dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:id="@+id/pendingOrder"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@color/colorPrimary"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:text="Pending.."
+                        android:layout_toRightOf="@id/pendingOrder"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginStart="5dp"
+                        android:gravity="center_vertical"/>
+
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="PENDING ORDERS"
+                            android:padding="10dp"
+                            android:id="@+id/tv4"
+                            android:gravity="end"
+                            android:layout_gravity="bottom"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/colorPrimary"
+                            android:background="#C12E31" />
+
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/ic_pending"
+                            android:id="@+id/ivpending"
+                            android:layout_marginStart="10dp"
+                            app:layout_anchor="@id/tv4"
+                            android:layout_marginBottom="30dp"
+                            />
+
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

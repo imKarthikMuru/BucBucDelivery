@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_round_storefront"
+            android:layout_centerVertical="true"
+            android:alpha="0.8"
+            android:id="@+id/storeIV"
+            app:tint="@color/pinColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/storeIV"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Name"
+                android:alpha="0.8"
+                android:textColor="@color/pinColor"
+                android:id="@+id/storeName"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/storeAddress"
+                android:singleLine="true"
+                android:text="Area Name" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_dotted_barline"
+        android:scaleType="centerCrop"
+        android:alpha="0.8"
+        android:layout_marginStart="11dp"
+        app:tint="@color/pinColor" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_round_home"
+            android:layout_centerVertical="true"
+            android:id="@+id/homeIV"
+            android:alpha="0.8"
+            app:tint="@color/pinColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/homeIV"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Name"
+                android:alpha="0.8"
+                android:textColor="@color/pinColor"
+                android:id="@+id/customerName"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:id="@+id/areaName"
+                android:text="Area Name" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price"
+        android:textColor="@color/pinColor"
+        android:alpha="0.8"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:text="₹200" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:layerType="software"
+        android:src="@drawable/dottedline" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/orderDetails"
+        android:singleLine="true"
+        android:text="Ordered Items x Qty"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Ordered Date, Time"
+        android:id="@+id/orderDate"
+        android:textSize="13dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/storked_bg"-->
+<!--            android:text="Order Received"-->
+<!--            android:id="@+id/accept"-->
+<!--            android:textColor="@color/LogoOrange"-->
+<!--             />-->
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/sharpe_edge_stroke"
+            android:text="Show Details"
+            android:id="@+id/show"
+            android:clickable="true"
+            android:textColor="@color/LogoOrange"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="15dp"
+        android:alpha="0.8"
+        android:background="@android:color/black" />
+
+</LinearLayout>

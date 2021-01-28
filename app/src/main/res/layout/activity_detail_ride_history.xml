@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".OrderDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        style="?actionButtonStyle"
+        android:gravity="center_vertical"
+        android:id="@+id/orderToolBar"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_round_arrow_back"
+            android:padding="10dp"
+            android:onClick="Back"
+            android:alpha="0.8"
+            app:tint="@color/pinColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ride Detail"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/pinColor"
+            android:alpha="0.8"/>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@id/l2"
+        android:layout_height="match_parent"
+        android:layout_below="@id/orderToolBar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ordered On: "
+                android:id="@+id/date"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pickup Address"
+                android:textSize="18dp"
+                android:alpha="0.8"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/pinColor"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:textColor="@color/pinColor"
+                android:alpha="0.8"
+                android:textStyle="bold"
+                android:id="@+id/storeName"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile"
+                android:layout_marginTop="5dp"
+                android:id="@+id/Storemobile"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:id="@+id/Storeaddress"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Address"
+                android:textSize="18dp"
+                android:alpha="0.8"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/pinColor"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:textColor="@color/pinColor"
+                android:alpha="0.8"
+                android:textStyle="bold"
+                android:id="@+id/cusName"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile"
+                android:layout_marginTop="5dp"
+                android:id="@+id/mobile"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:id="@+id/address"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/paymentType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:backgroundTint="@color/material_green_500"
+                    android:padding="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="start"
+                    android:drawableStart="@drawable/ic_round_payment"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/white"
+                    android:background="@drawable/curved_edges_bg"
+                    android:text="Payment Type"/>
+
+                <TextView
+                    android:drawableStart="@drawable/ic_round_call"
+                    android:drawableTint="@color/white"
+                    android:drawablePadding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:backgroundTint="@color/BannerOrange"
+                    android:padding="10dp"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"
+                    android:layout_gravity="end"
+                    android:background="@drawable/curved_edges_bg"
+                    android:text="Call Customer"
+                    android:id="@+id/callTV"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/dottedline"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/orderRecycler"/>
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_gravity="center_horizontal"-->
+            <!--                android:text="-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; End of Product List -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"/>-->
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:background="@color/pinColor"-->
+            <!--                android:alpha="0.5"-->
+            <!--                android:layout_marginTop="10dp"/>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Note"
+                android:id="@+id/noteTv"
+                android:textSize="14dp"
+                android:layout_marginTop="10dp"/>
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:background="@color/pinColor"-->
+            <!--                android:alpha="0.5"-->
+            <!--                android:layout_marginTop="10dp"/>-->
+
+            <ir.beigirad.zigzagview.ZigzagView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:zigzagBackgroundColor="@color/colorPrimary"
+                app:zigzagElevation="5dp"
+                app:zigzagHeight="10dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="10dp"
+                app:zigzagShadowAlpha="0.6"
+                app:zigzagSides="bottom">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:orientation="vertical"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BILL DETAILS"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pinColor"
+                        android:alpha="0.8"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="20dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/pinColor"
+                        android:alpha="0.4"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Item Total"
+                            android:id="@+id/tv1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toEndOf="@id/tv1"
+                            android:text="Rs.0"
+                            android:id="@+id/itemTotal"
+                            android:textAlignment="textEnd"/>
+
+                        <TextView
+                            android:layout_below="@id/tv1"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery Fee"
+                            android:id="@+id/tv2"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toEndOf="@id/tv2"
+                            android:id="@+id/deliveryFee"
+                            android:layout_below="@id/itemTotal"
+                            android:layout_marginTop="10dp"
+                            android:text="Rs.0"
+                            android:textAlignment="textEnd"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Taxes and Charges"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@id/tv2"
+                            android:id="@+id/tv3"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toEndOf="@id/tv3"
+                            android:text="Rs.0"
+                            android:id="@+id/taxes"
+                            android:layout_below="@id/deliveryFee"
+                            android:layout_marginTop="10dp"
+                            android:textAlignment="textEnd"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_below="@id/tv3"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/dottedline"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="To Pay"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/pinColor"
+                            android:alpha="0.8"
+                            android:layout_marginTop="30dp"
+                            android:layout_below="@id/tv3"
+                            android:id="@+id/tv4"/>
+
+                        <TextView
+                            android:layout_marginTop="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toEndOf="@id/tv4"
+                            android:layout_below="@id/taxes"
+                            android:text="Rs.0"
+                            android:id="@+id/toPay"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/pinColor"
+                            android:alpha="0.8"
+                            android:textAlignment="textEnd"/>
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </ir.beigirad.zigzagview.ZigzagView>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/getDirection"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/pinColor"
+            android:text="Get Direction"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/startRide"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/pinColor"
+            android:text="Start Ride"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
